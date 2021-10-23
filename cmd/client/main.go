@@ -2,14 +2,15 @@ package main
 
 import (
 	"context"
-	server2 "github.com/RedMonster727/grpc-sandbox/internal/generated/server/proto"
-	"google.golang.org/grpc"
 	"log"
 	"time"
+
+	server2 "github.com/RedMonster727/grpc-sandbox/internal/generated/server/proto"
+	"google.golang.org/grpc"
 )
 
 const (
-	address     = "localhost:8891"
+	address = "localhost:8891"
 )
 
 func main() {
@@ -37,4 +38,3 @@ func main() {
 	}
 
 }
-

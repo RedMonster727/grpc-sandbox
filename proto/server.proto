@@ -1,0 +1,28 @@
+
+syntax = "proto3";
+
+option go_package = "github.com/RedMonster727/grpc-sandbox/internal/generated/server";
+
+package server;
+
+// The greeting service definition.
+service TestServer {
+  rpc GetSomeData (GetSomeDataIn) returns (GetSomeDataOut) {}
+}
+
+message SomeNestedMessage {
+  repeated int64 value = 1;
+}
+
+message GetSomeDataIn {
+  SomeNestedMessage in = 1;
+}
+
+message OutNestedMessage {
+  repeated int64 value = 1;
+}
+
+// The response message containing the greetings
+message GetSomeDataOut {
+  map<string, OutNestedMessage> result = 1;
+}
